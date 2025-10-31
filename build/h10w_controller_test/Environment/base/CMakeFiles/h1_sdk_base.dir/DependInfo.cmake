@@ -1,0 +1,21 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.cpp" "Environment/base/CMakeFiles/h1_sdk_base.dir/case_api.cpp.o" "gcc" "Environment/base/CMakeFiles/h1_sdk_base.dir/case_api.cpp.o.d"
+  "/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.cpp" "Environment/base/CMakeFiles/h1_sdk_base.dir/main.cpp.o" "gcc" "Environment/base/CMakeFiles/h1_sdk_base.dir/main.cpp.o.d"
+  "/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/xmlHandler.cpp" "Environment/base/CMakeFiles/h1_sdk_base.dir/xmlHandler.cpp.o" "gcc" "Environment/base/CMakeFiles/h1_sdk_base.dir/xmlHandler.cpp.o.d"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

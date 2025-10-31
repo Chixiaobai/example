@@ -1,14 +1,14 @@
 #include <signal.h>
 #include "H10wGrpcMove.h"
-#include "h1_sdk_base.h"
+#include "main.h"
 
 static H10wGrpcMove *g_pTester = nullptr;
 
+// 信号处理函数（保持原有逻辑）
 static void consoleHandler(int intSigNum)
 {
     if ((SIGINT == intSigNum) || (SIGTERM == intSigNum))
     {
-
         if (nullptr != g_pTester)
         {
             g_pTester->stopTest();
@@ -16,13 +16,15 @@ static void consoleHandler(int intSigNum)
     }
 }
 
+// 设置控制台信号处理（保持原有逻辑）
 static void setConsoleHandler()
 {
     struct sigaction stSigAction;
     stSigAction.sa_handler = &consoleHandler;
     sigemptyset(&stSigAction.sa_mask);
     stSigAction.sa_flags = 0;
-    if (sigaction(SIGINT, &stSigAction, nullptr) != 0 || sigaction(SIGTERM, &stSigAction, nullptr) != 0)
+    if (sigaction(SIGINT, &stSigAction, nullptr) != 0 ||
+        sigaction(SIGTERM, &stSigAction, nullptr) != 0)
     {
         printf("Fail to set callback function for console application!\n");
         fflush(stdout);
@@ -30,19 +32,15 @@ static void setConsoleHandler()
 }
 
 // 定义测试用例的描述, 方便用户了解测试内容
-void H10w_FT_Grpc_Params_002() { printf("验证关节软限位修改后，获取关节软限位结果正确性\n"); }
-
-// 定义测试实体，多个用例可以关联同一个实体
-void h10w_ft_grpc_params_002()
+GTEST_CASE(auto_Grpc_Params, H10w_FT_Grpc_Params_002, "验证关节软限位修改后，获取关节软限位结果正确性")
 {
-
     setConsoleHandler();
 
-    std::vector<std::string> context; // 测试任务内容
-    std::vector<bool> num;            // 测试任务结果
-    std::vector<std::string> vec;     // 存储错误信息容器
+    auto test_context = std::make_shared<rclcpp::Context>();
+    test_context->init(0, nullptr);
 
-    auto node = std::make_shared<H10wGrpcMove>(IpPort);
+    auto node = std::make_shared<H10wGrpcMove>(IpPort, test_context);
+    g_pTester = node.get(); // 绑定全局指针用于信号处理
 
     // 启动spin循环（单独线程，避免阻塞主逻辑）
     std::thread spin_thread([&node]()
@@ -58,10 +56,9 @@ void h10w_ft_grpc_params_002()
     }
 
     // 测试任务2：修改关节软限位
-    context.emplace_back("修改所有关节软限位");
     std::cout << "Modify Joint Soft Limits: " << std::endl;
     int joint_count = 19;
-    std::vector<int> joint_index = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+    std::vector<uint32_t> joint_index = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
     std::vector<double> min_pos = {-0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.2, -0.2, 0.1, -0.001, -0.001};
     std::vector<double> max_pos = {0.5, 0.5, 0.5, 1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1.0, 0.5, 0.5, 0.5, 0.2, 0.2, 0.6, 0.001, 0.001};
 
@@ -71,16 +68,15 @@ void h10w_ft_grpc_params_002()
     for (auto &[i, max, min] : new_soft_limits)
     {
 
-        if (max_pos[i] = max && min_pos[i] = min)
+        if (max_pos[i] == max && min_pos[i] == min)
         {
             count++;
         }
     }
-    Test_Task_Result(num, count, joint_count);
+    EXPECT_EQ(count, joint_count);
 
     // 测试任务3：恢复所有关节软限位
     count = 0;
-    context.emplace_back("恢复所有关节软限位");
     for (auto &[i, max, min] : soft_limits)
     {
 
@@ -90,35 +86,26 @@ void h10w_ft_grpc_params_002()
 
     node->m_pControllerClient->setJointSoftLimit(joint_count, joint_index, min_pos, max_pos);
 
-    auto new_soft_limits = node->m_pControllerClient->getJointSoftLimit();
+    new_soft_limits = node->m_pControllerClient->getJointSoftLimit();
     for (auto &[i, max, min] : new_soft_limits)
     {
 
-        if (max_pos[i] = max && min_pos[i] = min)
+        if (max_pos[i] == max && min_pos[i] == min)
         {
             count++;
         }
     }
-    Test_Task_Result(num, count, joint_count);
+    EXPECT_EQ(count, joint_count);
 
     node->stopTest();
-    // 等待spin线程结束
-    spin_thread.join();
-
-    // 解析测试结果
-    Analysis_Test_Task_Result(num, "H10w_FT_Grpc_Params_002");
-    if (num.at(num.size() - 1))
+    // 清理资源
+    node->stopTest();
+    if (spin_thread.joinable())
     {
-        setCaseSucceed("H10w_FT_Grpc_Params_002");
+        spin_thread.join();
     }
-    else
-    {
-        setCaseFailed("H10w_FT_Grpc_Params_002");
-    }
+    node.reset();
 
+    g_pTester = nullptr;
     sleepMilliseconds(1000);
 }
-
-// 注册测试用例及测试方法
-REGIST_CASE_FUNCTION(h10w_ft_grpc_params_002)
-REGIST_CASE(H10w_FT_Grpc_Params_002, h10w_ft_grpc_params_002, H10w_FT_Grpc_Params_002);

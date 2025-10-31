@@ -54,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/h10w_controller_test/h10w_controller_test")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/h10w_controller_test/h10w_controller_test"
-         OLD_RPATH "/opt/ros/humble/lib:/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/fastdds_ws/install/lib:/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/thirdparty/grpc/lib:"
+         OLD_RPATH "/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/thirdparty/grpc/lib:/opt/ros/humble/lib:/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/fastdds_ws/install/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/h10w_controller_test/h10w_controller_test")
@@ -119,6 +119,12 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/h10w_controller_test" TYPE FILE FILES "/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/package.xml")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test/Environment/base/cmake_install.cmake")
+
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

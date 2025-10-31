@@ -1,0 +1,184 @@
+[0.009s] Invoking command in '/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller -DCMAKE_INSTALL_PREFIX=/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install
+[0.073s] -- The C compiler identification is GNU 11.4.0
+[0.122s] -- The CXX compiler identification is GNU 11.4.0
+[0.131s] -- Detecting C compiler ABI info
+[0.198s] -- Detecting C compiler ABI info - done
+[0.206s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.207s] -- Detecting C compile features
+[0.207s] -- Detecting C compile features - done
+[0.210s] -- Detecting CXX compiler ABI info
+[0.286s] -- Detecting CXX compiler ABI info - done
+[0.292s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.292s] -- Detecting CXX compile features
+[0.293s] -- Detecting CXX compile features - done
+[0.296s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.426s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.563s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.568s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.576s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.586s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.598s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.637s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.640s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.727s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.754s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.791s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.801s] -- Looking for pthread.h
+[0.867s] -- Looking for pthread.h - found
+[0.867s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.940s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.941s] -- Found Threads: TRUE  
+[0.993s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.080s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[1.093s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.095s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.098s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.104s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.111s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.129s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.130s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.201s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.233s] -- Found controller: 0.0.0 (/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/fastdds_ws/install/share/controller/cmake)
+[1.259s] -- Found GTest: /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake (found version "1.11.0")  
+[1.260s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.318s] -- Configuring done
+[1.402s] -- Generating done
+[1.413s] -- Build files have been written to: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test
+[1.426s] Invoked command in '/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller -DCMAKE_INSTALL_PREFIX=/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install
+[1.428s] Invoking command in '/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test -- -j12 -l12
+[1.469s] gmake[2]: 警告：文件“../../Environment/base/case_api.cpp”的修改时间在未来 28285 秒后
+[1.476s] [  6%] [32mBuilding CXX object Environment/base/CMakeFiles/h1_sdk_base.dir/main.cpp.o[0m
+[1.476s] [  6%] [32mBuilding CXX object Environment/base/CMakeFiles/h1_sdk_base.dir/case_api.cpp.o[0m
+[1.476s] [  9%] [32mBuilding CXX object Environment/base/CMakeFiles/h1_sdk_base.dir/xmlHandler.cpp.o[0m
+[1.564s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[1.564s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.cpp:1[m[K:
+[1.565s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[1.565s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[1.565s]       |                                                  
+[1.614s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[1.614s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[1.614s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.cpp:1[m[K:
+[1.614s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[1.614s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[1.614s]       |                                                  
+[3.608s] [ 12%] [32m[1mLinking CXX static library libh1_sdk_base.a[0m
+[3.634s] gmake[2]: 警告：检测到时钟错误。您的构建版本可能是不完整的。
+[3.642s] [ 12%] Built target h1_sdk_base
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/motion_service.grpc.pb.cc.o[0m
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/src/H10W/grpc/params/H10w_FT_Grpc_Params_003.cpp.o[0m
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/src/H10W/grpc/params/H10w_FT_Grpc_Params_001.cpp.o[0m
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/chassis_service.pb.cc.o[0m
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/chassis_service.grpc.pb.cc.o[0m
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/motion_service.pb.cc.o[0m
+[3.678s] [ 35%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/src/H10W/grpc/params/H10w_FT_Grpc_Params_004.cpp.o[0m
+[3.678s] [ 41%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/params_service.pb.cc.o[0m
+[3.678s] [ 41%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/system_service.grpc.pb.cc.o[0m
+[3.679s] [ 48%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/system_service.pb.cc.o[0m
+[3.679s] [ 48%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/src/H10W/grpc/params/H10w_FT_Grpc_Params_002.cpp.o[0m
+[3.679s] [ 51%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/common/grpc_pb_cpp/params_service.grpc.pb.cc.o[0m
+[4.704s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[4.704s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[4.704s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[4.704s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wGrpcMove.h:11[m[K,
+[4.705s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/src/H10W/grpc/params/H10w_FT_Grpc_Params_002.cpp:2[m[K:
+[4.705s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[4.705s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[4.705s]       |                                                  
+[4.834s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[4.834s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[4.834s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[4.834s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wGrpcMove.h:11[m[K,
+[4.835s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/src/H10W/grpc/params/H10w_FT_Grpc_Params_004.cpp:2[m[K:
+[4.835s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[4.835s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[4.835s]       |                                                  
+[4.974s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[4.975s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[4.975s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[4.975s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wGrpcMove.h:11[m[K,
+[4.975s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/src/H10W/grpc/params/H10w_FT_Grpc_Params_003.cpp:2[m[K:
+[4.975s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[4.975s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[4.975s]       |                                                  
+[5.025s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[5.025s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[5.025s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[5.025s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wGrpcMove.h:11[m[K,
+[5.025s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/src/H10W/grpc/params/H10w_FT_Grpc_Params_001.cpp:2[m[K:
+[5.025s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[5.025s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[5.025s]       |                                                  
+[7.616s] [ 54%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/monitor/cpp/humanoid_monitor/humanoid_monitor.grpc.pb.cc.o[0m
+[8.341s] [ 58%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/monitor/cpp/humanoid_monitor/humanoid_monitor.pb.cc.o[0m
+[8.524s] [ 61%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/monitor/cpp/humanoid_monitor/joint_pos_track_err.grpc.pb.cc.o[0m
+[9.396s] [ 64%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/monitor/cpp/humanoid_monitor/joint_pos_track_err.pb.cc.o[0m
+[11.026s] [ 67%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/monitor/cpp/humanoid_monitor/joint_speed_check.grpc.pb.cc.o[0m
+[11.156s] [ 70%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/grpc_msg/grpc_ws/monitor/cpp/humanoid_monitor/joint_speed_check.pb.cc.o[0m
+[11.790s] [ 74%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/part_test/DeviceControlServiceClient.cpp.o[0m
+[13.513s] [ 77%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/part_test/H10wGrpcMove.cpp.o[0m
+[13.838s] [ 80%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/part_test/H10wRos2Client.cpp.o[0m
+[13.888s] [ 83%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/part_test/H10wRosMove.cpp.o[0m
+[14.817s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[14.818s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[14.818s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[14.818s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wGrpcMove.h:11[m[K,
+[14.818s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wGrpcMove.cpp:8[m[K:
+[14.818s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[14.818s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[14.818s]       |                                                  
+[15.043s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[15.043s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[15.043s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[15.044s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRosMove.h:14[m[K,
+[15.044s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRos2Client.h:4[m[K,
+[15.046s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRos2Client.cpp:1[m[K:
+[15.046s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[15.046s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[15.046s]       |                                                  
+[15.229s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[15.229s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[15.229s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[15.229s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRosMove.h:14[m[K,
+[15.229s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRosMove.cpp:8[m[K:
+[15.229s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[15.229s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[15.230s]       |                                                  
+[15.393s] [ 87%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/part_test/H10wRosParams.cpp.o[0m
+[15.915s] In file included from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_api.h:4[m[K,
+[15.915s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/main.h:14[m[K,
+[15.915s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10Wglobalconstants.h:6[m[K,
+[15.915s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRosParams.h:6[m[K,
+[15.915s]                  from [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/H10wRosParams.cpp:8[m[K:
+[15.915s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/Environment/base/case_def.h:19:49:[m[K [01;35m[Kwarning: [m[Kbackslash-newline at end of file
+[15.916s]    19 | #define GTEST_CASE(case_group, case_name, desc) \
+[15.916s]       |                                                  
+[16.589s] [ 90%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/part_test/humanoid_controller_client.cpp.o[0m
+[17.763s] [ 93%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/rpc_service/service/Service.grpc.pb.cc.o[0m
+[20.215s] [ 96%] [32mBuilding CXX object CMakeFiles/h10w_controller_test.dir/include_H10w/rpc_service/service/Service.pb.cc.o[0m
+[25.287s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/humanoid_controller_client.cpp:[m[K In member function ‘[01m[Kbool HumanoidControllerClient::stop()[m[K’:
+[25.288s] [01m[K/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/include_H10w/part_test/humanoid_controller_client.cpp:113:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[25.288s]   113 | [01;35m[K}[m[K
+[25.288s]       | [01;35m[K^[m[K
+[40.211s] [100%] [32m[1mLinking CXX executable h10w_controller_test[0m
+[60.644s] [100%] Built target h10w_controller_test
+[60.653s] Invoked command in '/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test -- -j12 -l12
+[60.662s] Invoking command in '/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test
+[60.666s] -- Install configuration: ""
+[60.666s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/lib/h10w_controller_test/h10w_controller_test
+[60.678s] -- Set runtime path of "/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/lib/h10w_controller_test/h10w_controller_test" to ""
+[60.678s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/ament_index/resource_index/package_run_dependencies/h10w_controller_test
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/ament_index/resource_index/parent_prefix_path/h10w_controller_test
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/environment/ament_prefix_path.sh
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/environment/ament_prefix_path.dsv
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/environment/path.sh
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/environment/path.dsv
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/local_setup.bash
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/local_setup.sh
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/local_setup.zsh
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/local_setup.dsv
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/package.dsv
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/ament_index/resource_index/packages/h10w_controller_test
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/cmake/h10w_controller_testConfig.cmake
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/cmake/h10w_controller_testConfig-version.cmake
+[60.679s] -- Installing: /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/install/share/h10w_controller_test/package.xml
+[60.681s] Invoked command in '/home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/lizhou/Desktop/Humanoid/H10_W/h10_sdk/H10w_controller/build/h10w_controller_test
