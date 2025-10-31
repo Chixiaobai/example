@@ -20,7 +20,7 @@ struct TestCaseMeta {
 void case_##case_group##_##case_name##_body(); \
 REGISTER_TEST_META(case_group, case_name, desc); \
 TEST(case_group, case_name) { \
-    if (should_skip_test(#case_group)) { \
+    if (g_test_config.case_type.empty() && (std::string(#case_group).substr(0, 4) != "auto")) { \
         GTEST_SKIP() << "需手动执行（" << #case_group << "），默认跳过"; \
     } \
     case_##case_group##_##case_name##_body(); \

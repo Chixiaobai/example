@@ -1,2 +1,0 @@
-/usr/bin/ar qc libh1_sdk_base.a CMakeFiles/h1_sdk_base.dir/case_api.cpp.o CMakeFiles/h1_sdk_base.dir/main.cpp.o CMakeFiles/h1_sdk_base.dir/xmlHandler.cpp.o
-/usr/bin/ranlib libh1_sdk_base.a
