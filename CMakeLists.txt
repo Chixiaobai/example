@@ -51,6 +51,7 @@ include_directories(
 add_executable(${PROJECT_NAME}
     ${TEST_SRCS}           # 测试用例源码
     ${H10W_SRCS}           # H10w 其他源码（防止漏加）
+    ${CMAKE_CURRENT_SOURCE_DIR}/Environment/base/main.cpp 
 )
 
 # 5. 链接所有依赖（完全还原原逻辑）
@@ -60,7 +61,6 @@ target_link_libraries(${PROJECT_NAME}
     ${rclcpp_LIBRARIES}    # ROS 2 rclcpp 库
     ${controller_LIBRARIES}# controller 库
     GTest::GTest           # GTest 库
-    GTest::Main            # GTest 主程序
 )
 
 # 6. ROS 2 依赖传递
@@ -70,14 +70,20 @@ ament_target_dependencies(${PROJECT_NAME}
 )
 
 # 7. 注册 GTest 测试目标
-ament_add_gtest_test(${PROJECT_NAME})
+# ament_add_gtest_test(${PROJECT_NAME})
 
 # 8. 安装配置
 install(TARGETS
     ${PROJECT_NAME}
     DESTINATION lib/${PROJECT_NAME}
 )
-
+# 在文件末尾加这两句，覆盖默认安装逻辑
+install(TARGETS ${PROJECT_NAME}
+    RUNTIME DESTINATION lib/${PROJECT_NAME}
+    PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
+                GROUP_EXECUTE GROUP_READ
+                WORLD_EXECUTE WORLD_READ
+)
 # 9. 输出文件后缀
 set_target_properties(${PROJECT_NAME} PROPERTIES
     DEBUG_POSTFIX "d"

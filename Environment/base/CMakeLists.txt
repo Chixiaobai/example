@@ -13,6 +13,7 @@ find_package(rclcpp REQUIRED)
 file(GLOB BASE_SRC 
     ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp  # 匹配base目录下所有.cpp
 )
+list(REMOVE_ITEM BASE_SRC "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp")
 
 # 4. 编译为静态库（供外层工程链接）
 add_library(${PROJECT_NAME} STATIC ${BASE_SRC})

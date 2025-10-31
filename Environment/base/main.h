@@ -15,8 +15,6 @@
 #include <vector>
 #include "xmlHandler.h"
 using namespace std;
-// 全局测试配置（供测试用例访问）
-extern TestTaskConfig g_test_config;
 
 #define Get_robot_config_file_path(robot_point_file)\
     int pos1=std::string(__FILE__).rfind("/");\
