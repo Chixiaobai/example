@@ -6,34 +6,18 @@
 #include <algorithm>
 #include <iomanip>
 #include <string>
-std::string g_target_group_prefix = "";
 
-bool should_skip_test(const std::string& current_group_name) {
-    // 场景1：输入了-case（指定执行范围）→ 不跳过任何用例（GTest会自动过滤）
-    if (!g_target_group_prefix.empty()) {
-        return false;
-    }
-
-    // 场景2：未输入-case（默认执行auto组）→ 非auto组的用例需要跳过
-    if (current_group_name.substr(0, 4) != "auto") {  // 判断组名是否以"auto"开头
-        return true;
-    }
-
-    return false;
-}
-
-// 解析命令行参数（保留原有逻辑，兼容-case/-robot参数）
 bool parse_test_arguments(int argc, char**argv, TestTaskConfig& config) {
+    std::cout << "解析-case参数："  << std::endl;
     // 初始化默认过滤规则（执行所有用例）
-    config.case_filter = "auto*";  // 不输入-case时的默认值
-    g_target_group_prefix = "auto";
     for (int i = 1; i < argc; ++i) {
+        
         std::string arg = argv[i];
         if (arg == "-case" && i + 1 < argc) {
             // 解析-case参数：支持 "BATCH_NAME" 或 "BATCH_NAME.CASE_NAME"
             std::string case_input = argv[++i];
             config.case_type = case_input;  // 保存入参的-case值
-            g_target_group_prefix = "";
+            
             // 生成GTest过滤规则：
             if (case_input.find('.') != std::string::npos) {
                 // 输入单个用例（如"H10w_FT_Grpc_Params.Params_001"）
@@ -47,7 +31,6 @@ bool parse_test_arguments(int argc, char**argv, TestTaskConfig& config) {
         } else if (arg == "-report" && i + 1 < argc) {
             config.report_path = argv[++i];
         }
-        // 忽略其他参数（如--gtest_filter，由程序自动生成）
     }
 
     // 校验必填参数（仅robot_type必填）
@@ -59,41 +42,6 @@ bool parse_test_arguments(int argc, char**argv, TestTaskConfig& config) {
     return true;
 }
 
-
-
-// 将case_type转换为GTest过滤表达式（如"FT_grpc" → "H10w_FT*"）
-std::string case_type_to_filter(const std::string &case_type, const std::string &robot_type)
-{
-    // 提取case_type前缀（如"FT_grpc"取"FT"，"Joint_Test"取"Joint"）
-    size_t under_pos = case_type.find('_');
-    std::string case_prefix = (under_pos != std::string::npos)
-                                  ? case_type.substr(0, under_pos)
-                                  : case_type;
-    // 生成过滤规则：机器人类型_前缀*（确保只匹配目标用例组）
-    return robot_type + "_" + case_prefix + "*";
-}
-
-// 加载测试配置文件（根据robot_type和case_type自动定位配置）
-std::map<std::string, std::string> load_test_config(
-    const std::string &case_type,
-    const std::string &robot_type,
-    const std::string &config_path)
-{
-    std::map<std::string, std::string> params;
-    // 自动生成配置路径（未传路径时默认：config/机器人类型/用例类型.xml）
-    std::string actual_path = config_path.empty()
-                                  ? "config/" + robot_type + "/" + case_type + ".xml"
-                                  : config_path;
-
-    // 打印配置加载日志（实际项目中需替换为XML/JSON解析逻辑）
-    std::cout << "[配置加载] 路径：" << actual_path << std::endl;
-    // 模拟配置参数（实际需从文件读取，此处仅为示例）
-    params["expected_param"] = "0.01";    // 示例：预期参数值
-    params["timeout"] = "5000";           // 示例：超时时间（毫秒）
-    params["robot_ip"] = "192.168.1.100"; // 示例：机器人IP
-
-    return params;
-}
 
 // 生成HTML格式报告（图形化，支持浏览器打开）s
 bool save_html_report(const std::string &report_path, const TestTaskConfig &config)
